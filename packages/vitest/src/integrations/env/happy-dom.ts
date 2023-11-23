@@ -47,6 +47,9 @@ export default <Environment>({
       },
     })
 
+    // fix `css.escape` will pollute global.CSS
+    global.CSS = win.CSS
+
     const { keys, originals } = populateGlobal(global, win, { bindFunctions: true })
 
     return {

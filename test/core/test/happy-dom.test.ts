@@ -111,6 +111,7 @@ it('can call global functions without window works as expected', async () => {
   expect(() => window.requestAnimationFrame(noop)).not.toThrow()
   expect(() => self.requestAnimationFrame(noop)).not.toThrow()
   expect(() => globalThis.requestAnimationFrame(noop)).not.toThrow()
+  expect(() => window.CSS.supports('')).not.toThrow()
 })
 
 it('globals are the same', () => {
